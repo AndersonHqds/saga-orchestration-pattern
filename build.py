@@ -35,14 +35,14 @@ def build_all_applications():
 def remove_remaining_containers():
     print("Removing all containers.")
     os.system("docker-compose down")
-    containers = os.popen('docker ps -aq').read().split('\n')
-    containers.remove('')
-    if len(containers) > 0:
-        print("There are still {} containers created".format(containers))
-        for container in containers:
-            print("Stopping container {}".format(container))
-            os.system("docker container stop {}".format(container))
-        os.system("docker container prune -f")
+#     containers = os.popen('docker ps -aq').read().split('\n')
+#     containers.remove('')
+#     if len(containers) > 0:
+#         print("There are still {} containers created".format(containers))
+#         for container in containers:
+#             print("Stopping container {}".format(container))
+#             os.system("docker container stop {}".format(container))
+#         os.system("docker container prune -f")
 
 
 if __name__ == "__main__":
