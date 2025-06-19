@@ -53,6 +53,7 @@ services:
   kafka:
     container_name: kafka
     image: obsidiandynamics/kafka
+    platform: linux/amd64
     restart: "no"
     ports:
       - "2181:2181"
